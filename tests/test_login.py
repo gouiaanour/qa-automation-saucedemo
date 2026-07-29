@@ -20,6 +20,7 @@ def test_login_invalide(driver):
         (By.CSS_SELECTOR,"[data-test='error']")))
     error = page.get_error_message()
     assert "password" in error
+    time.sleep(5)
 
 def test_login_username_empty(driver):
     page = LoginPage(driver)
@@ -29,6 +30,7 @@ def test_login_username_empty(driver):
         (By.CSS_SELECTOR,"[data-test='error']")))
     error = page.get_error_message()
     assert "Username" in error
+    time.sleep(5)
 
 def test_login_password_empty(driver):
     page = LoginPage(driver)
@@ -38,3 +40,4 @@ def test_login_password_empty(driver):
         (By.CSS_SELECTOR,"[data-test='error']")))
     error = page.get_error_message()
     assert "Password" in error
+    time.sleep(5)
